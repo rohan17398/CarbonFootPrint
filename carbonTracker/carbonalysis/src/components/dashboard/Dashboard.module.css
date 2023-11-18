@@ -1,0 +1,47 @@
+.dashBody {
+    background-color:#f4f4f4;
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 55px;
+    background-size: cover;
+}
+
+.dashColumnHeading {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.dashColumnOne {
+    background-color: white;
+    /* display: flex;
+    align-items: center; */
+    float: left;
+    width: 70%;
+    padding: 40px;
+    margin-right: 15px;
+    height: 70vh;
+}
+
+.dashColumnTwo {
+    background-color: white;
+    /* display: flex;
+    align-items: center; */
+    float: left;
+    width: 30%;
+    padding: 40px;
+    margin: 15px;
+    height: 70vh;
+}
+
+.linkItem {
+    font-size: 23px;
+    color: #35A407;
+}
+
+.linkItem:hover {
+    color: #E4670C;
+    text-decoration: none;
+}
