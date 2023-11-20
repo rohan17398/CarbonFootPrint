@@ -13,7 +13,7 @@ const Homepage = () => {
     }
 
     return (
-        <div className = {styles.homeBody} style = {{backgroundImage: `url(${Background})`}}>
+        <div className = {styles.homeBody} style = {{background: 'black'}}>
             <div className = {styles.homeContainer} >
                 <h1 className = {styles.homeHeading} >Track Your Carbon Footprint</h1>
                 <p className = {styles.homeDescription} >Carbonalysis tracks your carbon footprint by answering a few simple questions!</p>
@@ -24,6 +24,7 @@ const Homepage = () => {
                 </ul>
                 <HomepageButton buttonText="Register!" onClick={onClickRedirect}/>
             </div>
+            <img src="/lgn.png" style={{marginLeft : "10%"}}></img>
         </div>
     )
 }

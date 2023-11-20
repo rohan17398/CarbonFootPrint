@@ -13,6 +13,7 @@ import { Animation } from '@devexpress/dx-react-chart';
 import axios from 'axios';
 import styles from './Dashboard.module.css'
 
+
 const useStyles = makeStyles(() => ({
     chartContainer: {
         position: "absolute",
@@ -152,7 +153,7 @@ export default function Dashboard() {
         <div className={styles.dashBody}>
             <div className={styles.dashColumnOne}>
                 <h1 className={styles.dashColumnHeading}>How You Compare Against The World</h1>
-                <div style={{display: "flex"}}>
+                <div>
                     <Paper style={{boxShadow: "none",margin: "30px 60px"}} className={classes.barchart}>
                         <Chart
                             data={footprintData}
@@ -163,8 +164,7 @@ export default function Dashboard() {
                             <BarSeries
                                 valueField="footprint"
                                 argumentField="averages"
-                                color="#e4670c"
-                                
+                                color="#A9FFF7"
                             />
                             <Title text="Average Carbon Footprint (in points)" />
                             <Animation />
@@ -181,7 +181,7 @@ export default function Dashboard() {
                             <BarSeries
                                 valueField="emissions"
                                 argumentField="averages"
-                                color="#35A407"
+                                color="#94FBAB"
                             />
                             <Title text="Average CO2 Emissions (in tons)" />
                             <Animation />
@@ -192,15 +192,16 @@ export default function Dashboard() {
             <div className={styles.dashColumnTwo}>
                 <div className={styles.dashColumnTwoDiv}  >
                 <h1 className={styles.dashColumnHeading}>Your Stats</h1>
-                <div>
-                <div class="MuiTypography-root Title-root-8 MuiTypography-h5">
-                    Avg. Carbon Footprint: <span style={{color:"#e4670c"}}>{footprintRes} points</span> <br/>
+                <div style={{textAlign:"left"}}>
+                <div class="MuiTypography-root Title-root-8 MuiTypography-h5" style={{color:"white",textAlign:"left"}}>
+                    Avg. Carbon Footprint : <span style={{color:"#FE938C"}}>{footprintRes} points</span> <br/>
                 </div>
-                <div class="MuiTypography-root Title-root-8 MuiTypography-h5">
-                    Avg. CO2 Emissions: <span style={{color:"#e4670c"}}>{emissionsRes} tons</span>
+                <div class="MuiTypography-root Title-root-8 MuiTypography-h5" style={{color:"white",textAlign:"left"}}>
+                    Avg. CO2 Emissions : <span style={{color:"#FE938C"}}>{emissionsRes} tons</span>
                 </div>
                 </div>
                 </div>
+                <hr style={{color:"white"}}></hr>
                 <div className={styles.dashColumnTwoDiv}>
                 <h1 className={styles.dashColumnHeading} style={{}}>Global Resources</h1>
                 <div >

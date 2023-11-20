@@ -1,7 +1,7 @@
 import { useContext, useEffect } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-
+import 'bootstrap/dist/css/bootstrap.css';
 import FormPages from '../form-pages/FormPages';
 import Emissions from '../form-pages/Emissions';
 import Homepage from '../homepage/Homepage';

@@ -16,10 +16,10 @@ import axios from 'axios';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    maxWidth: '50rem',
     minWidth: '25rem',
     maxHeight: '50rem',
-    minHeight: '25rem'
+    minHeight: '25rem',
+    color : 'white'
   },
   header: {
     display: 'flex',

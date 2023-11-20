@@ -16,14 +16,13 @@ import axios from 'axios';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    maxWidth: '50rem',
     minWidth: '25rem',
     maxHeight: '50rem',
-    minHeight: '25rem'
+    minHeight: '25rem',
+    color : 'white'
   },
   header: {
     display: 'flex',
-    alignItems: 'center',
     height: 50,
     paddingLeft: theme.spacing(4),
     backgroundColor: theme.palette.background.default,
@@ -86,7 +85,7 @@ export default function Emissions() {
       <div className={styles.questionnaireCard}>
         <div className={classes.root}>
         <h1 className={styles.questionnaireTitle}>CO2 Emissions Analyzer</h1>
-        <Paper style={{backgroundColor:"white"}} square elevation={0} className={classes.header}>
+        <Paper square elevation={0} className={classes.header}>
           <Typography>{co2Emissions[activeStep].label}</Typography>
         </Paper>
         <div className={styles.radioContainer}>

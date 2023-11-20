@@ -2,21 +2,22 @@
     max-width: 250px;
 }
 .logo1{
-    background: linear-gradient( 15deg, #06ff11 0%, #5ce356 60%, #5fffc1 60%, #ffcb66 60%, #ffae11 );
+    /* background: linear-gradient( 15deg, #06ff11 0%, #5ce356 60%, #5fffc1 60%, #ffcb66 60%, #ffae11 ); */
     height: 60px;
     width: 250px;
+    padding: 10px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     font-size: 20px;
     font-weight: 500;
-    color: #dc3545;
-
+    color: white;
+    text-decoration: none;
 }
 
 .navbar {
     height: 10vh;
-    background-color: white;
+    background-color: #121212;
 }
 
 .toolbar {

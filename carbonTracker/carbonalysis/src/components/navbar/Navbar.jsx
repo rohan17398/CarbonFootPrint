@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import carbonalysisLogo from './carbonalysisLogo.png';
 import { Link, BrowserRouter as Router, NavLink } from 'react-router-dom';
 import styles from './NavBar.module.css';
+import { Height } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -35,9 +36,10 @@ export default function Navbar({ token }) {
     return (
         <div className = {styles.navbar}>
             <AppBar position="fixed" className = {styles.navbar}>
-                <Toolbar style={{background: "lavender"}} className = {styles.toolbar}>
+                <Toolbar style={{background: "#303030"}} className = {styles.toolbar}>
                     <a href="/" className={styles.logo1}>
-                        <span className={styles.logo}>C-Emission Tracker</span>
+                        <img src='/logo.png' style={{height:"inherit"}}></img>
+                        <span className={styles.logo}>Carbon Compass</span>
                     </a>
                     <Typography variant="h6" className={classes.title}> </Typography>
                         {
