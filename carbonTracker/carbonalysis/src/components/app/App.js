@@ -22,7 +22,7 @@ function App() {
   })
 
   return (
-    <div className="App">
+    <div className="App" style={{"font-family": "ui-rounded"}}>
         <Router>
         <Navbar token={token} />
           <div className="App-container">

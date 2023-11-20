@@ -1,4 +1,3 @@
-# Carbonalysis
 
 ## Dependencies
 

@@ -34,10 +34,10 @@ export default function Navbar({ token }) {
   
     return (
         <div className = {styles.navbar}>
-            <AppBar position="fixed" className={classes.navbar} className = {styles.navbar}>
-                <Toolbar className={classes.root} className = {styles.toolbar}>
-                    <a href="/" style = {{marginLeft: "60px"}}>
-                        <img src={carbonalysisLogo} className={styles.logo} />
+            <AppBar position="fixed" className = {styles.navbar}>
+                <Toolbar style={{background: "lavender"}} className = {styles.toolbar}>
+                    <a href="/" className={styles.logo1}>
+                        <span className={styles.logo}>C-Emission Tracker</span>
                     </a>
                     <Typography variant="h6" className={classes.title}> </Typography>
                         {

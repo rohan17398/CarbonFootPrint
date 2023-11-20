@@ -152,8 +152,8 @@ export default function Dashboard() {
         <div className={styles.dashBody}>
             <div className={styles.dashColumnOne}>
                 <h1 className={styles.dashColumnHeading}>How You Compare Against The World</h1>
-                <div className={classes.chartContainer}>
-                    <Paper style={{boxShadow: "none", marginLeft:"100px"}} className={classes.barchart}>
+                <div style={{display: "flex"}}>
+                    <Paper style={{boxShadow: "none",margin: "30px 60px"}} className={classes.barchart}>
                         <Chart
                             data={footprintData}
                         >
@@ -171,7 +171,7 @@ export default function Dashboard() {
                         </Chart>
                     </Paper>
 
-                    <Paper style={{boxShadow: "none", marginLeft:"100px"}} className={classes.barchart}>
+                    <Paper style={{boxShadow: "none",margin: "30px 60px"}} className={classes.barchart}>
                         <Chart
                             data={emissionsData}
                         >
@@ -190,14 +190,20 @@ export default function Dashboard() {
                 </div>
             </div>
             <div className={styles.dashColumnTwo}>
+                <div className={styles.dashColumnTwoDiv}  >
                 <h1 className={styles.dashColumnHeading}>Your Stats</h1>
-                <div style={{textAlign: "left"}} class="MuiTypography-root Title-root-8 MuiTypography-h5">
+                <div>
+                <div class="MuiTypography-root Title-root-8 MuiTypography-h5">
                     Avg. Carbon Footprint: <span style={{color:"#e4670c"}}>{footprintRes} points</span> <br/>
                 </div>
-                <div style={{textAlign: "left"}} class="MuiTypography-root Title-root-8 MuiTypography-h5">
+                <div class="MuiTypography-root Title-root-8 MuiTypography-h5">
                     Avg. CO2 Emissions: <span style={{color:"#e4670c"}}>{emissionsRes} tons</span>
                 </div>
-                <h1 className={styles.dashColumnHeading} style={{marginTop:"120px"}}>Global Resources</h1>
+                </div>
+                </div>
+                <div className={styles.dashColumnTwoDiv}>
+                <h1 className={styles.dashColumnHeading} style={{}}>Global Resources</h1>
+                <div >
                 <div style={{textAlign:"left", marginBottom:"5px"}}>
                         <a className={styles.linkItem} target="_blank" href="https://blogs.ei.columbia.edu/2018/12/27/35-ways-reduce-carbon-footprint/">
                             35 Easy Ways to Reduce Carbon Footprint
@@ -212,6 +218,8 @@ export default function Dashboard() {
                         <a className={styles.linkItem} target="_blank" href="https://blogs.ei.columbia.edu/2018/12/27/35-ways-reduce-carbon-footprint/">
                             25+ Ways to Reduce Carbon Emissions
                         </a>
+                </div>
+                </div>
                 </div>
             </div>
         </div>
