@@ -9,15 +9,14 @@ import Checkboxes from '../checkbox/Checkbox';
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    width : '100%!important',
     flexGrow: 1,
-    maxWidth: '50rem',
     minWidth: '50rem',
     maxHeight: '30rem',
     minHeight: '30rem',
-    margin: 'auto'
+    color: 'white!important'
   },
   subGroup: {
-    alignContent: 'center',
     marginTop: '4rem'
   }
 }));
@@ -82,7 +81,7 @@ export default function RadioButtonsGroup({ carbonFootprintQuestions }) {
     <FormControl className={classes.root} component="fieldset">
       <RadioGroup className={classes.subGroup} name={name} onChange={handleChange}>
         {carbonFootprintQuestions.name === 'recycle' ?
-          <Checkboxes />
+          <Checkboxes style={{color: 'white!important'}} />
         :
         carbonFootprintQuestions.options.map(option => (
            <FormControlLabel
@@ -99,7 +98,8 @@ export default function RadioButtonsGroup({ carbonFootprintQuestions }) {
                 option === flights ? true :
                 false
               }
-              key={option} value={option} control={<Radio />} label={option}
+              style={{color: 'white'}}
+              key={option} value={option} control={<Radio style={{color : 'white'}} />} label={option}
             />
         ))}
       </RadioGroup>

@@ -4,6 +4,7 @@ import Background from './homepageImage.png'
 import HomepageButton from './homepageButton/HomepageButton'
 import { useHistory } from 'react-router-dom';
 
+
 const Homepage = () => {
 
     let history = useHistory();
@@ -22,7 +23,7 @@ const Homepage = () => {
                     <li>Get listed on the global leaderboards!</li>
                     <li>Save your footprint progress!</li>
                 </ul>
-                <HomepageButton buttonText="Register!" onClick={onClickRedirect}/>
+                <HomepageButton buttonText="Register!" style={{borderRadius: '14px'}} onClick={onClickRedirect}/>
             </div>
             <img src="/lgn.png" style={{marginLeft : "10%"}}></img>
         </div>

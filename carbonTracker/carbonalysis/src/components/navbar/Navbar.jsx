@@ -39,7 +39,7 @@ export default function Navbar({ token }) {
                 <Toolbar style={{background: "#303030"}} className = {styles.toolbar}>
                     <a href="/" className={styles.logo1}>
                         <img src='/logo.png' style={{height:"inherit"}}></img>
-                        <span className={styles.logo}>Carbon Compass</span>
+                        <span className={styles.logo}>  Carbon Compass</span>
                     </a>
                     <Typography variant="h6" className={classes.title}> </Typography>
                         {

@@ -1,18 +1,22 @@
 .formInput {
-    background-color: #f4f4f4;
+    background-color: #222222!important;
     margin-bottom: 8px;
     font-size: 16px;
     padding: 15px 20px;
     border-width: 0px 0px 1px 0px;
     min-width: 100%;
+    border-radius: 12px;
+    color: white;
 }
 
 .formButton {
+    background-color: 63D471!important;
     font-size: 18px;
     border: none;
     padding: 15px 40px;
-    width: 60%;
+    width: 100%;
     margin-top: 20px;
+    border-radius: 10px;
 }
 
 .formButton:hover {

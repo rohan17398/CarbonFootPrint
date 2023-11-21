@@ -11,16 +11,16 @@ import Offsets from '../input-pages/Offsets';
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    width : '100%!important',
     flexGrow: 1,
-    maxWidth: '50rem',
     minWidth: '50rem',
     maxHeight: '30rem',
     minHeight: '30rem',
-    margin: 'auto'
+    margin: 'auto',
+    color : 'white'
   },
   subGroup: {
-    alignContent: 'center',
-    marginTop: '4rem'
+    marginTop: '4rem',
   }
 }));
 
@@ -71,7 +71,7 @@ export default function RadioButtonsGroup({ co2Emissions }) {
         co2Emissions.options.map(option => (
            <FormControlLabel
               checked={option === car ? true : false}
-              key={option} value={option} control={<Radio />} label={option}
+              key={option} value={option} control={<Radio style={{color: 'white'}} />} label={option}
             />
         ))}
       </RadioGroup>

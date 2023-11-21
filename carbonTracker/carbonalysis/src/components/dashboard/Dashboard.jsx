@@ -8,6 +8,7 @@ import {
     Title,
     ArgumentAxis,
     ValueAxis,
+    PieSeries
 } from '@devexpress/dx-react-chart-material-ui';
 import { Animation } from '@devexpress/dx-react-chart';
 import axios from 'axios';
@@ -34,13 +35,23 @@ export default function Dashboard() {
     const [emissionsRes, setEmissionsRes] = useState(0);
     const [footprintRes, setFootprintRes] = useState(0);
     const [allEmissions, setAllEmissions] = useState(0);
+    const [caravg, setCar] = useState(0);
+    const [utilavg, setUtil] = useState(0);
+    const [fuelavg, setFuel] = useState(0);
     const [allFootprints, setAllFootprints] = useState(0);
+
 
     const { user } = useContext(carbonFootprintContext);
 
     const footprintData = [
         { averages: 'Your Average', footprint: footprintRes },
         { averages: 'Global Average', footprint: allFootprints }
+    ];
+
+    const avgdata = [
+        { averages: 'Car Average', emission: caravg },
+        { averages: 'Fuel Average', emission: fuelavg },
+        { averages: 'Utility Average', emission: utilavg }
     ];
 
     const emissionsData = [
@@ -51,7 +62,7 @@ export default function Dashboard() {
     
     const calculateAverage = (data, type, user) => {
         let total = 0;
-
+        // console.log(data)
         for (const x of data) {
             if (type === 'emissions') {
                 total += x.total_emissions;
@@ -73,6 +84,52 @@ export default function Dashboard() {
         }
     }
 
+    const calculateAverageCar = (data, type, user) => {
+        let total = 0;
+        // console.log(data)
+        for (const x of data) {
+            if (type === 'car') {
+                total += x.car;
+            } else {
+                total += x.car;
+            }
+        }
+
+        total /= data.length;
+        setCar(total);
+    }
+
+
+    const calculateAverageUtil = (data, type, user) => {
+        let total = 0;
+        // console.log(data)
+        for (const x of data) {
+            if (type === 'utility') {
+                total += x.utility;
+            } else {
+                total += x.utility;
+            }
+        }
+
+        total /= data.length;
+        setUtil(total);
+    }
+
+    const calculateAverageFuel = (data, type, user) => {
+        let total = 0;
+        // console.log(data)
+        for (const x of data) {
+            if (type === 'fuel') {
+                total += x.fuel;
+            } else {
+                total += x.fuel;
+            }
+        }
+
+        total /= data.length;
+        setFuel(total);
+    }
+
     useEffect(() => {
         const emissionsFetch = async () => {
             await axios({
@@ -85,6 +142,9 @@ export default function Dashboard() {
             })
             .then((response) => {
                 calculateAverage(response.data, 'emissions', 'self');
+                calculateAverageCar(response.data, 'car', 'self');
+                calculateAverageUtil(response.data, 'utility', 'self');
+                calculateAverageFuel(response.data, 'fuel', 'self');
             })
             .catch(() => {
                 throw new Error();
@@ -149,12 +209,32 @@ export default function Dashboard() {
         getAllEmissions();
     }, [calculateAverage, user])
 
+    
+    console.log(avgdata)
+
     return (
         <div className={styles.dashBody}>
             <div className={styles.dashColumnOne}>
                 <h1 className={styles.dashColumnHeading}>How You Compare Against The World</h1>
                 <div>
-                    <Paper style={{boxShadow: "none",margin: "30px 60px"}} className={classes.barchart}>
+{/* 
+                <Paper>
+                    <Chart
+                    data={avgdata}
+                    >
+                        <PieSeries
+                            valueField="Emissions"
+                            argumentField="Average"
+                            innerRadius={0.6}
+                        />
+                        <Title
+                            text="Average Contribution of Emissions"
+                        />
+                        <Animation />
+                    </Chart>
+                </Paper> */}
+
+<Paper style={{boxShadow: "none",margin: "30px 60px"}} className={classes.barchart}>
                         <Chart
                             data={footprintData}
                         >

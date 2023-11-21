@@ -16,7 +16,7 @@ spring:
 #    hibernate:
   datasource:
     platform: postgres
-    url: jdbc:postgresql://localhost:5432/carbonalysis
+    url: jdbc:postgresql://localhost:5432/carbonfinal
     username: postgres
     password: 12345678
     driverClassName: org.postgresql.Driver

@@ -71,11 +71,13 @@ const Register = () => {
                 }
             })
             .then(() => {
-                history.push('/login');
+                // history.push('http://localhost:3000/login');
+                // this.props.history.push('http://localhost:3000/login')
             })
             .catch(() => {
                 throw new Error();
             })
+            history.push('http://localhost:3000/login');
         }
 
         submitNewUser();
@@ -84,14 +86,14 @@ const Register = () => {
 
 
     return(
-        <div className = {styles.formBody} style={{backgroundImage: `url(${BackgroundImage})`}}>
-            <form className = {styles.formCard} onSubmit={handleSubmit}>
-                <h1 className={styles.formHeading} >Sign Up <u>FREE</u> Today!</h1>
+        <div className = {styles.formBody} style={{background: 'black'}}>
+            <form className = {styles.formCard} onSubmit={handleSubmit} style={{background : '#121212', borderRadius : '16px'}}>
+                <h1 className={styles.formHeading} style={{color : 'white'}} >Sign Up <u>FREE</u> Today!</h1>
                 <div className={styles.column}>
                     <input className={styles.formInput} type="text" placeholder="First name" value={user.first_name} onChange={e => onChangeUser(e, 'fn')}></input> <br/>
                     <input className={styles.formInput} type="text" placeholder="Last name" value={user.last_name} onChange={e => onChangeUser(e, 'ln')}></input> <br/>
-                    <input className={styles.formInput} type="email" placeholder="Email" value={user.email} onChange={e => onChangeUser(e, 'email')}></input> <br/>
-                    <input className={styles.formInput} type="password" placeholder="Password" value={user.password} onChange={e => onChangeUser(e, 'pass')}></input> <br/>
+                    <input className={styles.formInput} type="email" placeholder="Email" value={user.email} onChange={e => onChangeUser(e, 'email')} autoComplete='nope'></input> <br/>
+                    <input className={styles.formInput} type="password" placeholder="Password" value={user.password} onChange={e => onChangeUser(e, 'pass')} autoComplete='new-password'></input> <br/>
                     <input className={styles.formInput} type="password" placeholder="Confirm password"></input>
                 </div>
                 <div className={styles.column}>

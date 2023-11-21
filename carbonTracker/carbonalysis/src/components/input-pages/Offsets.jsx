@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexWrap: 'wrap',
+    color : 'white'
   },
   margin: {
     margin: theme.spacing(1),
@@ -36,10 +37,11 @@ export default function InputAdornments() {
     <div className={classes.root}>
       <div>
         <FormControl fullWidth className={classes.margin} variant="outlined">
-          <InputLabel htmlFor="outlined-adornment-offsets">Trees planted</InputLabel>
+          <InputLabel htmlFor="outlined-adornment-offsets"  style={{color: 'white'}}>Trees planted</InputLabel>
           <OutlinedInput
             id="outlined-adornment-offsets"
             value={offsets}
+            style={{color: 'white',background: '#ffffff17',borderRadius: '10px'}}
             onChange={handleChange}
             labelWidth={60}
           />

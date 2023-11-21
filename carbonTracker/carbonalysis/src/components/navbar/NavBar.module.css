@@ -42,3 +42,9 @@
     color: #e4670c;
     transition: 300ms;
 }
+
+.link .active {
+    text-decoration: none;
+    color: green;
+    transition: 300ms;
+}

@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexWrap: 'wrap',
+    color : 'white!important'
   },
   margin: {
     margin: theme.spacing(1),
@@ -39,11 +40,12 @@ export default function InputAdornments() {
   return (
     <div className={classes.root}>
       <div>
-        <FormControl fullWidth className={classes.margin} variant="outlined">
-          <InputLabel htmlFor="outlined-adornment-totalMiles">Total miles driven</InputLabel>
+        <FormControl style={{color: 'white'}} fullWidth className={classes.margin} variant="outlined">
+          <InputLabel style={{color: 'white'}} htmlFor="outlined-adornment-totalMiles">Total miles driven</InputLabel>
           <OutlinedInput
             id="outlined-adornment-totalMiles"
             value={fuel.totalMiles}
+            style={{color: 'white',background: '#ffffff17',borderRadius: '10px'}}
             onChange={handleChange('totalMiles')}
             labelWidth={60}
             type="number"
@@ -51,10 +53,11 @@ export default function InputAdornments() {
           />
         </FormControl>
         <FormControl fullWidth className={classes.margin} variant="outlined">
-          <InputLabel htmlFor="outlined-adornment-mpg">Miles per gallon</InputLabel>
+          <InputLabel style={{color: 'white'}} htmlFor="outlined-adornment-mpg">Miles per gallon</InputLabel>
           <OutlinedInput
             id="outlined-adornment-mpg"
             value={fuel.mpg}
+            style={{color: 'white',background: '#ffffff17',borderRadius: '10px'}}
             onChange={handleChange('mpg')}
             labelWidth={60}
             type="number"
