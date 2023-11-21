@@ -1,0 +1,63 @@
+.dashBody {
+    background-color:#121212;
+    width: 100%;
+    padding: 20px;
+}
+
+.dashColumnHeading {
+    padding: 16px 40px;
+    font-weight: 700;
+    color: white;
+}
+
+.dashColumnOne {
+    background-color: #61616152;
+    font-size:20px;
+    font-weight: 500;
+    border-radius: 30px;
+    padding-top: 30px;
+}
+
+.dashColumnTwo {
+    background-color: #61616152;
+    font-size:20px;
+    font-weight: 500;
+    margin-top: 20px!important;
+    border-radius: 30px;
+    padding: 34px;
+}
+.dashColumnTwoDiv{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;    
+}
+
+.linkItem {
+    font-size: 23px;
+    color: #35A407;
+}
+
+.chartContainer{
+    position: relative !important;
+}
+
+.linkItem {
+    color: #94FBAB!important;
+    text-decoration: none!important;
+}
+
+.linkItem:hover {
+    color: #94FBAB!important;
+    text-decoration: none!important;
+}
+
+.Title-root-8{
+    color: white!important;
+}
+h3{
+    color: white!important;
+  }
+
+.Component-root-10{
+    color: white;
+}

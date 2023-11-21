@@ -1,0 +1,61 @@
+.formInput {
+    background-color: #222222!important;
+    margin-bottom: 8px;
+    font-size: 16px;
+    padding: 15px 20px;
+    border-width: 0px 0px 1px 0px;
+    min-width: 100%;
+    border-radius: 12px;
+    color: white;
+}
+
+.formButton {
+    background-color: 63D471!important;
+    font-size: 18px;
+    border: none;
+    padding: 15px 40px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.formButton:hover {
+    background-color: green;
+    transition: 300ms;
+}
+
+.formInvalidCredentials {
+    font-size: 16px;
+    color: red;
+    text-align: left;
+}
+
+.formBody {
+    background-color:#f4f4f4;
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    background-size: cover;
+}
+
+.formCard {
+    min-width: 400px;
+    background-color: white;
+    padding: 50px 40px;
+    text-align: center;
+}
+
+.formHeading {
+    font-size: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
